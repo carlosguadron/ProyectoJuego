@@ -2,34 +2,32 @@ using UnityEngine;
 
 public class CubeController : MonoBehaviour
 {
-    public float moveSpeed = 2f; // Velocidad de movimiento
-    public float rotationSpeed = 50f; // Velocidad de rotaci髇
+    public float moveSpeed = 2f;        // Velocidad de movimiento hacia adelante
+    public float rotationSpeed = 100f;  // Velocidad de rotaci贸n manual
 
+    private bool rotateX = false; // Variable para activar rotaci贸n en X
 
-
-    private void Update()
+    void Update()
     {
-        /* 
-         
-             // Movimiento constante hacia adelante en cada frame
-             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        // Movimiento autom谩tico hacia adelante
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 
-             // Rotaci髇 en Update (afectada por los FPS)
-             transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
-
-        */
-
-        if (Input.GetKey(KeyCode.R)) // Si presionas R, rota
+        // Rotaci贸n en el eje Y (Update, dependiente de FPS) con la tecla D
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
         }
 
-
+        // Detectar si la tecla A est谩 presionada para rotar en X
+        rotateX = Input.GetKey(KeyCode.A);
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        // Rotaci髇 en FixedUpdate (m醩 consistente con la f韘ica)
-        transform.Rotate(Vector3.right * rotationSpeed * Time.fixedDeltaTime);
+        // Aplicar rotaci贸n en X en FixedUpdate si la tecla A est谩 presionada
+        if (rotateX)
+        {
+            transform.Rotate(Vector3.right * rotationSpeed * Time.fixedDeltaTime);
+        }
     }
 }
