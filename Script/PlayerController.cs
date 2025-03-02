@@ -4,8 +4,8 @@ public class playercontroller : MonoBehaviour
 {
     
     public float rotationSpeed = 300f;
-    public float movementSpeed = 100f;
-    public float maxVelocity = 200f;
+    public float movementSpeed = 4000f;
+    public float maxVelocity = 4000f;
     private Rigidbody rb;
     void Start()
     {
@@ -13,7 +13,6 @@ public class playercontroller : MonoBehaviour
     }
     void Update()
     {
-        
         
         if (Input.GetKey(KeyCode.D))
         {
@@ -28,8 +27,7 @@ public class playercontroller : MonoBehaviour
             rb.AddForce(transform.forward * movementSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
-        {
-            
+        {           
             rb.AddForce(-transform.forward * movementSpeed * Time.deltaTime);
         }
         if (rb.velocity.magnitude > maxVelocity)
