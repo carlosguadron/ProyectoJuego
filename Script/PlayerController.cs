@@ -21,16 +21,16 @@ public class playercontroller : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.up * -rotationSpeed * Time.deltaTime);
+            transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.W))
         {
-            rb.AddForce(transform.forward * movementSpeed);
+            rb.AddForce(transform.forward * movementSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
             
-            rb.AddForce(-transform.forward * movementSpeed);
+            rb.AddForce(-transform.forward * movementSpeed * Time.deltaTime);
         }
         if (rb.velocity.magnitude > maxVelocity)
         {
