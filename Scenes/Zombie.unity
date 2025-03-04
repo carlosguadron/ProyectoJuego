@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 576266098}
-  fieldOfView: 120
+  fieldOfView: 180
   viewDistance: 15
   moveSpeed: 3
   eyeUI: {fileID: 32446279}
