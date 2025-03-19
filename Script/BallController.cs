@@ -25,4 +25,5 @@ public class BallController : MonoBehaviour
         rb.useGravity = true; // Activamos la gravedad cuando la bola es lanzada
         rb.AddForce(transform.forward * launchForce, ForceMode.Impulse); // Agregamos fuerza para el lanzamiento
     }
+
 }

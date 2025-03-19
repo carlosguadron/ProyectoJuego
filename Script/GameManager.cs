@@ -30,4 +30,10 @@ public class GameManager : MonoBehaviour
             scoreText.text = "Puntuación: " + score;
         }
     }
+    public void EndTurn()
+    {
+        Debug.Log("Turno terminado. Preparando siguiente turno...");
+        // Aquí más adelante agregaremos la lógica del sistema de turnos
+    }
+
 }
