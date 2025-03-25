@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PushObject : MonoBehaviour
 {
-    public float pushForce = 5f; // Fuerza del empuje
+    public float pushForce = 1f; // Fuerza del empuje
     private Rigidbody rb;
 
     void Start()
