@@ -9,7 +9,7 @@ public class AmongUsBasicMovement : MonoBehaviour
     public float velocidadRotacion = 10f;
 
     [Header("Referencias")]
-    public Transform camara; // Cámara independiente
+    private Transform camara; // Aquí lo dejamos como privado
 
     private Rigidbody rb;
     private float rotacionX = 0f;
@@ -23,17 +23,31 @@ public class AmongUsBasicMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         Cursor.lockState = CursorLockMode.Locked;
+
+        // Aquí obtenemos automáticamente la cámara del jugador
+        camara = Camera.main != null ? Camera.main.transform : null;  // Se verifica que Camera.main no sea null
+
+        if (camara == null)
+        {
+            Debug.LogError("No se ha encontrado la cámara principal (MainCamera). Asegúrate de que la cámara esté etiquetada correctamente.");
+        }
     }
 
     void Update()
     {
-        RotarCamara();
-        RotarPersonaje();
+        if (camara != null)  // Aseguramos que la cámara no sea null antes de realizar acciones
+        {
+            RotarCamara();
+            RotarPersonaje();
+        }
     }
 
     void FixedUpdate()
     {
-        MoverJugador();
+        if (camara != null)  // Aseguramos que la cámara no sea null antes de mover al jugador
+        {
+            MoverJugador();
+        }
     }
 
     void RotarCamara()

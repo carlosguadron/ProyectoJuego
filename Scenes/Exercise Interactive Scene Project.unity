@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 330872712}
   - component: {fileID: 330872711}
   m_Layer: 0
-  m_Name: CamaraPrimeraPersona
+  m_Name: CamPrimeraPersona
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1263,24 +1263,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 64.6074, y: 0.59226036, z: 42.87285}
   m_Center: {x: 17.724163, y: -0.20386982, z: -1.4915123}
---- !u!114 &834528613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834528609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f55af3b959cb1a24cbec29489b8f1cbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadNormal: 5
-  velocidadSprint: 8
-  sensibilidadMouse: 2
-  velocidadRotacion: 10
-  camara: {fileID: 0}
-  limiteVertical: 80
 --- !u!1 &834623193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8009987137999418058, guid: 678672bace22b7140a718daa6654e12c, type: 3}
@@ -1919,7 +1901,6 @@ MonoBehaviour:
   velocidadSprint: 8
   sensibilidadMouse: 2
   velocidadRotacion: 10
-  camara: {fileID: 330872713}
   limiteVertical: 80
 --- !u!136 &1213011941
 CapsuleCollider:
@@ -2840,9 +2821,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 678672bace22b7140a718daa6654e12c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 834528612}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 678672bace22b7140a718daa6654e12c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 834528613}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 678672bace22b7140a718daa6654e12c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 415999657}
