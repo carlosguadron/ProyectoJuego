@@ -10,7 +10,7 @@ public class ActivarUICamaras : MonoBehaviour
     // Variable que se activa cuando el jugador esta dentro de la zona
     private bool jugadorDentro = false;
 
-    // Update se ejecuta una vez por frame
+
     void Update()
     {
         // Si el jugador esta dentro del trigger y presiona la tecla C
