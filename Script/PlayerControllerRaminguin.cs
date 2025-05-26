@@ -50,6 +50,14 @@ public class PlayerControllerRaminguin : MonoBehaviour
         transform.Rotate(Vector3.up * mouseX); // Rotación horizontal
     }
 
+    private bool movimientoBloqueado = false;
+
+    public void BloquearMovimiento(bool bloquear)
+    {
+        movimientoBloqueado = bloquear;
+    }
+
+
     void HandleCameraSwitch()
     {
         if (Input.GetKeyDown(KeyCode.C)) // Presiona "C" para alternar entre cámaras
